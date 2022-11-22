@@ -78,7 +78,7 @@ img {
   justify-content: baseline;
 }
 
-.header__logo {
+.logo {
   text-align: center;
   margin-right: 93px;
   color: var(--accent);
@@ -89,7 +89,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.header__icon {
+.logo__header {
   color: var(--logo-text-color);
 }
 
@@ -112,7 +112,7 @@ img {
   transition: color var(--trns-org);
 }
 
-.header__link.current::after {
+.header__link--current::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -127,7 +127,7 @@ img {
 
 .header__link:hover,
 .header__link:focus,
-.header .current {
+.header__link--current {
   color: var(--accent);
 }
 
@@ -333,7 +333,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.work__paint {
+.work__group {
   display: block;
   padding-top: 30px;
   padding-bottom: 16px;
@@ -356,7 +356,7 @@ img {
   text-align: center;
 }
 
-.work__icons {
+.social-list {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -365,12 +365,12 @@ img {
   padding-top: 0;
 }
 
-.work__social {
+.social-list__item {
   flex-basis: calc((100% - 3 * 10px) / 4);
   align-items: center;
 }
 
-.work__link {
+.social-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,8 +382,8 @@ img {
   transition: fill var(--trns-org), background-color var(--trns-org);
 }
 
-.work__link:hover,
-.work__link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   fill: #ffffff;
   background-color: var(--accent);
 }
@@ -422,13 +422,13 @@ img {
 
 /* Content */
 
-.content__list {
+.button__list {
   display: flex;
   justify-content: center;
   margin-bottom: 34px;
 }
 
-.content__item:not(:last-child) {
+.button__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -456,30 +456,30 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.cards__list {
+.team {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.content__cards {
+.team__item {
   flex-basis: calc((100% - 30px * 2) / 3);
 }
 
-.content__link {
+.team__link {
   display: block;
   border-radius: 4px;
 
   transition: box-shadow var(--trns-org);
 }
 
-.content__link:hover,
-.content__link:focus {
+.team__link:hover,
+.team__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.content__link:hover .content__overlay {
+.team__link:hover .overlay__group {
   transform: translateY(0);
 }
 
@@ -488,7 +488,7 @@ img {
   overflow: hidden;
 }
 
-.content__overlay {
+.overlay__group {
   position: absolute;
   top: 0;
   left: 0;
@@ -513,14 +513,14 @@ img {
   color: #ffffff;
 }
 
-.content__border {
+.team__border {
   border: 1px solid #eeeeee;
   border-top: 0;
   padding: 20px 24px;
   margin-bottom: 4px;
 }
 
-.content__title {
+.team__title {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -528,7 +528,7 @@ img {
   letter-spacing: 0.06em;
 }
 
-.content__text {
+.team__text {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.9;
@@ -544,26 +544,38 @@ img {
   background-color: #2f303a;
 }
 
-.footer-logo {
-  color: var(--accent);
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  margin-bottom: 20px;
-  display: block;
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 70px;
+  padding: 60px 15px;
 }
 
-.footer .logo-text {
+.logo__footer {
   color: var(--white-text-color);
 }
 
-.footer-nav {
+.address {
+  font-style: normal;
+}
+
+.address__text {
+  color: var(--white-text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
   display: block;
 }
 
-.footer-link {
+
+
+.footer-nav__items:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-nav__link {
   color: var(--footer-text-color);
   font-size: 14px;
   line-height: 1.7;
@@ -573,37 +585,12 @@ img {
   transition: color var(--trns-org);
 }
 
-.footer-items:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-link:hover,
-.footer-link:focus {
+.footer-nav__link:hover,
+.footer-nav__link:focus {
   color: var(--accent);
 }
 
-.footer .text {
-  color: var(--white-text-color);
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  margin-bottom: 9px;
-  display: block;
-}
-
-.footer .address {
-  font-style: normal;
-}
-
-.footer_container {
-  display: flex;
-  align-items: center;
-  justify-content: baseline;
-  gap: 70px;
-  padding: 60px 15px;
-}
-
-.footer-social-text {
+.social__text {
   margin-bottom: 20px;
   color: #ffffff;
   font-weight: 700;
@@ -613,7 +600,12 @@ img {
   text-transform: uppercase;
 }
 
-.footer-social-link {
+.social__list{
+  display: flex;
+  gap: 10px;
+}
+
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -626,21 +618,18 @@ img {
   transition: background-color var(--trns-org);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.social__link:hover,
+.social__link:focus {
   background-color: var(--accent);
 }
 
-.footer-section {
-  display: flex;
-  gap: 10px;
-}
 
-.footer-form {
+
+.form {
   width: 100%;
 }
 
-.footer-form-title {
+.form__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.16;
@@ -650,20 +639,20 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-form-list {
+.form__list {
   display: flex;
   align-items: center;
   justify-content: baseline;
   gap: 12px;
 }
 
-.footer-form-label {
+.form__label {
   position: relative;
   overflow: hidden;
   background-color: transparent;
 }
 
-.footer-form-item {
+.form__item {
   width: 358px;
   background-color: transparent;
 
@@ -675,7 +664,7 @@ img {
   outline: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-form-text {
+.form__text {
   position: absolute;
   top: 0;
   left: 16px;
@@ -692,15 +681,15 @@ img {
   transition: transform var(--trns-org);
 }
 
-.footer-form-item:focus + .footer-form-text {
+.form__item:focus + .form__text {
   transform: translateY(-90%);
 }
 
-.footer-form-item:focus {
+.form__item:focus {
   color: var(--white-text-color);
 }
 
-.footer-form-btn {
+.form__btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9x;
@@ -719,13 +708,13 @@ img {
   cursor: pointer;
 }
 
-.footer-form-btn:focus,
-.footer-form-btn:hover {
+.form__btn:focus,
+.form__btn:hover {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(240, 235, 235, 0.945);
 }
 
-.footer-form-img {
+.button__img {
   margin-left: 10px;
 }
 
