@@ -1,5 +1,4 @@
 .footer {
-    max-width: 1600px;
     margin: 0 auto;
     color: var(--footer-text-color);
     background-color: #2f303a;
@@ -29,15 +28,14 @@
     display: block;
 
     transition: color var(--trns-org);
+
     &:hover,
     &:focus {
-            color: var(--accent);
-        }
+        color: var(--accent);
+    }
 }
 
 .footer-social__list {
     display: flex;
     gap: 10px;
 }
-
-

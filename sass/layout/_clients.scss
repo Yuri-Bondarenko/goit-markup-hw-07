@@ -20,6 +20,7 @@
     fill: #afb1b8;
 
     transition: fill var(--trns-org), border var(--trns-org);
+
     &:hover,
     &:focus {
         fill: var(--accent);
@@ -27,4 +28,3 @@
     }
 
 }
-
